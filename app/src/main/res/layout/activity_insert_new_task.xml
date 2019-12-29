@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/taskEntryToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ToolbarColoredBackArrow"
+        app:title="New Task Entry"
+        app:titleTextColor="@color/colorWhite"/>
+
+
+    <LinearLayout
+        android:id="@+id/lin_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:visibility="visible">
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/cv_one_login"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_margin="1dp"-->
+            <!--app:cardBackgroundColor="#fff"-->
+            <!--android:background="@drawable/round_shape"-->
+            <!--app:cardCornerRadius="8dp"-->
+            <!--app:cardPreventCornerOverlap="false"-->
+            <!--app:cardUseCompatPadding="false"-->
+            <!--card_view:cardElevation="8dp">-->
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="6dp"
+                android:background="@android:color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_shape"
+                        android:layout_marginRight="2dp">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/kraSP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="KRA"
+                            android:layout_marginRight="2dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_shape"
+                        android:layout_marginLeft="2dp">
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/kpiSP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="KPI"
+                            android:layout_marginRight="2dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2dp">
+
+                        <android.support.design.widget.TextInputLayout
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:hint="Task Title" />
+                        </android.support.design.widget.TextInputLayout>
+                    </RelativeLayout>
+
+                    <!-- Password -->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:layout_marginLeft="2dp">
+
+                        <android.support.design.widget.TextInputLayout
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:inputType="number"
+                                android:hint="Target Score" />
+                        </android.support.design.widget.TextInputLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <!-- Username -->
+
+
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_shape"
+                android:layout_marginBottom="8dp">
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/prioritySP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Priority" />
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_shape"
+                android:layout_marginBottom="8dp">
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/statusSP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Status"/>
+                </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+
+                <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_shape"
+                android:layout_marginRight="2dp">
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/taskTypeSP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Task Type"
+                android:layout_marginRight="2dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_shape"
+                android:layout_marginLeft="2dp">
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/projectSP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Project"
+                android:layout_marginRight="2dp"/>
+                </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_shape"
+                android:orientation="horizontal"
+                android:layout_marginRight="2dp">
+
+                <ImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_date_range_grey_600_24dp"/>
+
+                <TextView
+                android:id="@+id/startDateTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="2dp"
+                android:text="Start Date"/>
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_shape"
+                android:orientation="horizontal"
+                android:layout_marginLeft="2dp">
+
+                <ImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_date_range_grey_600_24dp"/>
+
+                <TextView
+                android:id="@+id/dueDateTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="2dp"
+                android:text="Due Date"/>
+                </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1">
+                        <android.support.design.widget.TextInputLayout
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:inputType="number"
+                                android:hint="Estimated Hour" />
+                        </android.support.design.widget.TextInputLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1">
+                        <android.support.design.widget.TextInputLayout
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:inputType="number"
+                                android:hint="Completion (%)" />
+                        </android.support.design.widget.TextInputLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:padding="0dp"
+                    android:gravity="center">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/loginBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Save"
+                        android:background="@drawable/btn_round_corner"
+                        android:textAllCaps="false"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

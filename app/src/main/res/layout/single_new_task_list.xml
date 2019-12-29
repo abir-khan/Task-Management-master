@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="4dp">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="6dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="8dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:src="@drawable/task"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="0dp">
+
+                <TextView
+                    android:id="@+id/tasktitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="4dp"
+                    android:text="Home Work Title"
+                    android:textColor="@color/colorGreyDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_equalizer_gray_24dp"/>
+
+                        <TextView
+                            android:id="@+id/taskPriority"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text="Urgent"
+                            android:textSize="13sp"
+                            android:textColor="@color/colorRed"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="3dp">
+
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/progress"/>
+
+                        <TextView
+                            android:id="@+id/taskStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text="Someone Else"
+                            android:textSize="13sp"
+                            android:textColor="@color/holo_green_light"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="3dp">
+
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/estimated"/>
+
+                        <TextView
+                            android:id="@+id/esestimatedHour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text="80"
+                            android:textSize="13sp"
+                            android:textColor="@color/colorGreyDarkLight"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_timelapse_grey_600_24dp"/>
+
+                    <TextView
+                        android:id="@+id/taskStartDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textSize="13sp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="25 Mar 2018"
+                        android:textColor="@color/colorGreyDarkLight"
+                        />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="3dp">
+
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_timelapse_grey_600_24dp"/>
+
+                        <TextView
+                            android:id="@+id/taskDueDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text="25 Mar 2018"
+                            android:textSize="13sp"
+                            android:textColor="@color/colorGreyDarkLight"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
